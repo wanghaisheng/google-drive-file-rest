@@ -37,3 +37,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 To get Google access credentials, you will need to login to the Google Cloud console. Sign in using your Google account and create a new project. Under + Create credentials in the top-menu bar select OAuth Client id. If requested to “Configure Consent Screen”, click on this button. On the new page that opens up, select external for the user type and click on create. Next, input your app name and email then save and continue. Leave the scope and Test users section empty and click on “Save and Continue”. Back on the dashboard, repeat the first step and click on Oauth Client id. Select “Web application” for the application type. Click on Add URI and enter http://localhost. Finally, in the Authorized redirect URIs section, click Add URI and in the field provided, key in http://localhost/api/auth/callback/google. Then create the authentication key. Copy the client ID and the client secret and add it to your application for use.
+
+
+
+https://medium.com/@prodmxle/setting-up-nextauth-js-application-and-deploying-it-via-vercel-d6b02bf98397
+
+
+The NEXTAUTH_URL is the domain you will get after you deploy the application to vercel. Example: mynextauthapp.vercel.app
+
+To deploy the application for production, you will need one more environment variable, namely SECRET.
+
+.env.local

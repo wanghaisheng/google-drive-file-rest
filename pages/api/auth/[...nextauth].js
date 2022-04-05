@@ -20,6 +20,21 @@ const options = {
 	},
 
 	secret: "secret token",
+
+
+	callbacks: {
+		async session({ session, token, user }) {
+		  session.user.username = session.user.name
+		    .split(" ")
+		    .join("")
+		    .toLocaleLowerCase();
+	    
+		  session.user.uid = token.sub;
+		  return session;
+		}
+	      },
+	      
+	      secret: process.env.SECRET // SECRET env variable 	
 };
 
 export default (req, res) => NextAuth(req, res, options);
