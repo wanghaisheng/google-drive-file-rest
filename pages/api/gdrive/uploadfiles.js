@@ -1,7 +1,7 @@
 import { google } from "googleapis";
 import multer from "multer";
 import { getSession } from "next-auth/client";
-import sharp from "sharp";
+// import sharp from "sharp";
 import stream from "stream";
 export const config = {
 	api: {
@@ -27,8 +27,7 @@ export default async function UploadFiles(request, response) {
 					for (let index = 0; index < files.length; index++) {
 						const file = files[index];
 
-						const data = await sharp(file.buffer).resize(700).toBuffer();
-
+						const data = file.buffer
 						const bufferStream = new stream.PassThrough();
 						bufferStream.end(data);
 						var media = {

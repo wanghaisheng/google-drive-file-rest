@@ -32,3 +32,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+To get Google access credentials, you will need to login to the Google Cloud console. Sign in using your Google account and create a new project. Under + Create credentials in the top-menu bar select OAuth Client id. If requested to “Configure Consent Screen”, click on this button. On the new page that opens up, select external for the user type and click on create. Next, input your app name and email then save and continue. Leave the scope and Test users section empty and click on “Save and Continue”. Back on the dashboard, repeat the first step and click on Oauth Client id. Select “Web application” for the application type. Click on Add URI and enter http://localhost. Finally, in the Authorized redirect URIs section, click Add URI and in the field provided, key in http://localhost/api/auth/callback/google. Then create the authentication key. Copy the client ID and the client secret and add it to your application for use.
